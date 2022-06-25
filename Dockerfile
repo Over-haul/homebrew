@@ -33,5 +33,3 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ENTRYPOINT ["/opt/bash32/bin/bash"]
-
-ADD .VERSION /opt/ivy/meta/HOMEBREW_VERSION
