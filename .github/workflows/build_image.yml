@@ -43,9 +43,3 @@ jobs:
           push: true
           tags: |
             public.ecr.aws/e5r9m0c5/${{ steps.repoName.outputs.REPONAME }}:${{ steps.get-version.outputs.VERSION }}
-      - name: Check bash and homebrew
-        id: check-bash-brew
-        run: |
-          docker run --rm public.ecr.aws/e5r9m0c5/${{ steps.repoName.outputs.REPONAME }}:${{ steps.get-version.outputs.VERSION }} \
-            echo "${BASH_VERSION}"; \
-            brew doctor
