@@ -3,6 +3,7 @@ FROM ubuntu:jammy-20230816
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update \
+    && apt -y dist-upgrade \
     && apt install -y build-essential procps curl file git adduser byacc \
     && mkdir -p ${HOME}/bash \
     && cd ${HOME}/bash \
